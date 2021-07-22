@@ -17,7 +17,7 @@ public class ApolloConfig {
     /**
      * 是否开启Apollo
      */
-    @ConfigItem(name = ConfigItem.PARENT, defaultValue = "false")
+    @ConfigItem(name = ConfigItem.PARENT, defaultValue = "true")
     boolean enabled;
 
     /**

@@ -5,6 +5,8 @@ import org.eclipse.microprofile.config.spi.ConfigSource;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+
 /**
  * @author kl : http://kailing.pub
  * @version 1.0
@@ -33,7 +35,12 @@ public class ApolloConfigSource implements ConfigSource {
             return propertyMap;
         }
 
-        @Override
+    @Override
+    public Set<String> getPropertyNames() {
+        return config.getPropertyNames();
+    }
+
+    @Override
         public String getValue(String propertyName) {
             return config.getProperty(propertyName, null);
         }
